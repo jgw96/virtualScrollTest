@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page One</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list [virtualScroll]="items">
+    <button ion-item *virtualItem="let item">
+      <h3>{{item.name}}</h3>
+      <p>{{item.info}}</p>
+    </button>
+  </ion-list>
+</ion-content>
